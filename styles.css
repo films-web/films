@@ -1,0 +1,270 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text for contrast */
+}
+
+/* Container styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Slightly lighter dark for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners for modern look */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark background for header */
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #f1c40f; /* A pop of color for the title */
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+/* Form Styles */
+.signup-form, .login-form {
+    background-color: #2c2c2c; /* Dark background for the form */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.signup-form h2, .login-form h2 {
+    color: #f1c40f; /* A pop of color for headings */
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    color: #f1c40f;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+}
+
+form button {
+    background-color: #f1c40f;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d4ac0d;
+}
+
+#error-message, #signup-message {
+    color: #d9534f; /* Error message color */
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #5bc0de; /* Success message color */
+}
+
+#progress-container {
+    width: 100%;
+    background-color: #444;
+    border-radius: 4px;
+    margin-top: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+/* Progress bar itself */
+#progress-bar {
+    height: 100%;
+    background-color: #f1c40f;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    line-height: 20px; /* Centers text vertically */
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+/* Upload form styles */
+.upload-form {
+    background-color: #2c2c2c; /* Dark background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.upload-form label {
+    display: block;
+    color: #f1c40f;
+    margin-bottom: 5px;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+}
+
+.upload-form input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #444;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.upload-form button {
+    background-color: #f1c40f;
+    color: #121212;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.upload-form button:hover {
+    background-color: #d4ac0d;
+}
+
+.upload-message {
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777777;
+}
+
+/* Film card styles */
+.film-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: #1e1e1e; /* Dark background for film card */
+    transition: transform 0.3s ease;
+}
+
+.film-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    /* Start playing automatically but paused until hover */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-container:hover video {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    z-index: 1;
+}
+
+.video-container:hover .thumbnail {
+    display: none; /* Hide the thumbnail on hover */
+}
+
+.film-info {
+    padding: 10px;
+    background: #2c2c2c;
+    z-index: 2;
+}
+
+.film-info h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.film-info p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.film-info small {
+    display: block;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.film-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    form input[type="text"], form input[type="password"], form input[type="email"], form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}
+
+.film-info small {
+    display: block;
+    color: #777; /* Lighter text color for the date and uploader info */
+}
+
